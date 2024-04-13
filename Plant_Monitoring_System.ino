@@ -35,8 +35,6 @@ void setup()
 
 void loop()
 {
-  digitalWrite(waterPump, HIGH);
-    
   // Display Temperature & Humidity
   temperature = dht11.readTemperature();
   humidity = dht11.readHumidity();
