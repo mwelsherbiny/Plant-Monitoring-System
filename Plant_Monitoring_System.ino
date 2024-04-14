@@ -69,4 +69,8 @@ void loop()
   {
     digitalWrite(waterPump, HIGH);
   }
+  else
+  {
+    digitalWrite(waterPump, LOW);
+  }
 }
