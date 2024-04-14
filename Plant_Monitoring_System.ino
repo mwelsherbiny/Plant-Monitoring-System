@@ -17,7 +17,7 @@ float humidity;
 DHT11 dht11(dht);
 
 // Moisture Sensor
-int MoistureSensor = A0;
+int moistureSensor = A0;
 int moisture;
 
 // LDR
@@ -34,7 +34,9 @@ void setup()
 }
 
 void loop()
-{
+{    
+  lcd.setCursor(0, 0);
+  
   // Display Temperature & Humidity
   temperature = dht11.readTemperature();
   humidity = dht11.readHumidity();
@@ -58,7 +60,7 @@ void loop()
   }  
   
   // Display Moisture
-  moisture = analogRead(MoistureSensor);
+  moisture = analogRead(moistureSensor);
   lcd.print("  M: ");
   lcd.print(moisture);
   
